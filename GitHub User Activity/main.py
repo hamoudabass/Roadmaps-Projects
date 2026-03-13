@@ -12,19 +12,7 @@ def main():
     print(f"Since    : {oldest_event[0:10]}")
     print(f"Types    :")
 
-    temp = []
-
-    for i in result:
-        temp.append(i["type"])
-
-    tuple_ = tuple(temp)
-    eventpush = []
-
-    for eachEvent in tuple_:
-        if eachEvent not in eventpush:
-            eventpush.append(eachEvent)
-    for e in eventpush:
-        print(f"    → {e}")
+    GithubActivityController.get_events_types(result)
 
     # Avoir tous les repos que l'utilisateur a fait PushEvent
     # temp = []

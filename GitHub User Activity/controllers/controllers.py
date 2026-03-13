@@ -13,3 +13,26 @@ class GithubActivityController:
         except Exception as e:
             GithubActivityView.display_error(e)
             return None
+
+    @staticmethod
+    def get_events_types(result):
+        try :
+            temp = []
+
+            for i in result:
+                temp.append(i["type"])
+
+            tuple_ = tuple(temp)
+            events = []
+
+            for eachEvent in tuple_:
+                if eachEvent not in events:
+                    events.append(eachEvent)
+
+            GithubActivityView.display_events_types(events)
+
+            return events
+
+        except Exception as e:
+            GithubActivityView.display_error(e)
+            return None

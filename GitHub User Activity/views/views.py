@@ -1,4 +1,8 @@
 class GithubActivityView :
+    @staticmethod
+    def display_events_types(eventpush):
+        for e in eventpush:
+            print(f"    → {e}")
 
     @staticmethod
     def display_success(message):
