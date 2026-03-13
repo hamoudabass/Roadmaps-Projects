@@ -109,3 +109,5 @@ Inspired by [RoadMap.sh](https://roadmap.sh) — [GitHub User Activity Project](
 ## 👤 Author
 
 **Hamoud Abass** – Passionate Developer!
+[![GitHub](https://img.shields.io/badge/GitHub-Profile-black?logo=github)](https://github.com/hamoudabass)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Hamoud%20Abass-blue?logo=linkedin)](https://www.linkedin.com/in/hamoudabass)
