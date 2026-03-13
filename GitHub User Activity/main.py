@@ -2,44 +2,51 @@
 from controllers.controllers import GithubActivityController
 
 def main():
-    print("="*25,'GitHub User Activity',"="*25)
-    username = input("username : ")
+    #GitHub Activity CLI — v1.0.0
 
-    # Avoir les evenments publics depuis le dernier
-    result = GithubActivityController.get_github_activity(username)
-    oldest_event = result[-1]['created_at']
-    print(f"Events   : {len(result)}")
-    print(f"Since    : {oldest_event[0:10]}")
-    print(f"Types    :")
+    is_on = True
+    is_off = False
+    username = 'hamoudabass'
 
-    GithubActivityController.get_events_types(result)
+    while is_on:
+        print("=" * 25, 'GitHub User Activity', "=" * 25)
+        print("1. Fetch user activity")
+        print("2. Show event details")
+        print("3. Change GitHub user")
+        print("4. Exit")
 
-    # Avoir tous les repos que l'utilisateur a fait PushEvent
-    # temp = []
-    #
-    # for i in result:
-    #     if i["type"] == "PushEvent":
-    #         temp.append(i["repo"]["name"])
-    #
-    # tuple_ = tuple(temp)
-    # eventpush = []
-    #
-    # for eachEvent in tuple_:
-    #     if eachEvent not in eventpush:
-    #         eventpush.append(eachEvent)
-    #
-    #
-    # print("Voici une liste des repos que vous avez commit :")
-    # nombre = 0
-    # for e in eventpush:
-    #     for val in tuple_:
-    #         if val == e:
-    #             nombre += 1
-    #     print(f"Pushed {nombre} commits to {e}")
-    #     nombre = 0
+        choice = input("\nSelect an option : ")
+        print("="*50)
+        if choice == "1":
 
+            result = GithubActivityController.get_github_activity(username)
+            oldest_event = result[-1]['created_at']
+            print(f"Username : {username}")
+            print(f"Events   : {len(result)}")
+            print(f"Since    : {oldest_event[0:10]}")
+            print(f"Types    :")
 
+            GithubActivityController.get_events_types(result)
 
+            input("\nPress Enter to continue...")
+
+        elif choice == "2":
+            type_event = input("\nEnter event type: ")
+            result = GithubActivityController.get_github_activity(username)
+            GithubActivityController.get_events_detail(result, type_event)
+
+            input("\nPress Enter to continue...")
+
+        elif choice =="3":
+            username = input("\nEnter new GitHub username : ")
+            print(f"\n✓ User changed to {username}")
+
+        elif choice == "4":
+            print("\nThank you for using GitHub Activity CLI. Goodbye! 👋")
+            is_on = False
+
+        else:
+            print("\n✗ Invalid option, please try again.")
 
 
 if __name__ == '__main__':
