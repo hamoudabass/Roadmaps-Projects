@@ -1,0 +1,7 @@
+[project]
+name = "expensetracker"
+version = "0.1.0"
+description = "A simple expense tracker application to manage my finances"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = []
