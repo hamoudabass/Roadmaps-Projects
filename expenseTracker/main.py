@@ -18,6 +18,7 @@ def main():
     if args.command == "add":
         create_db()
         add(args.description, args.amount, date.today().isoformat())
+
     elif args.command == 'view':
         display()
 
