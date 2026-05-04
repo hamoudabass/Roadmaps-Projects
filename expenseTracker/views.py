@@ -1,12 +1,13 @@
-import sqlite3
+def add_dispaly(message):
+    print(f"Expense added successfully (ID:{message})")
 
-def display():
-    conn = sqlite3.connect("expense.db")
-    cursor = conn.cursor()
+def update_display(message):
+    print(message)
 
-    cursor.execute("SELECT * FROM expenses")
-    rows = cursor.fetchall()
+def delete_display(message):
+    print(message)
 
+def display_list(rows):    
     print("\n"+"="*50)
     print(f"{'ID':<5} {'Date':<12} {'Description':<15} {'Amount':>10}")
     print("="*50)
@@ -15,5 +16,8 @@ def display():
         id, date, description, amount = row
         print(f"{id:<5} {date:<12} {description:<15} ${amount:>9.2f}")
 
-    conn.commit()
-    conn.close()
+def display_summary(total):
+    print(f"Total expenses : ${total}")
+
+def display_summary_month(message):
+    print(message)
