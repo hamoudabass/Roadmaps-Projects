@@ -5,7 +5,9 @@ GitHub Activity CLI is a command line interface that allows you to fetch and exp
 ## 📦 Installation
 
 ```bash
-git clone https://github.com/hamoudabass/github-activity-cli.git
+git clone https://github.com/hamoudabass/Roadmaps-Projects.git
+
+cd Github User Activity
 ```
 
 ## 🛠 Usage
