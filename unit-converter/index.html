@@ -4,8 +4,67 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Unit Converter</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
 </head>
+
 <body>
+    <h1>Unit Converter</h1>
+
+    <div class="nav-bar">
+        <a href="#" class="active">Length</a>
+        <a href="./pages/weight.html">Weight</a>
+        <a href="./pages/temperature.html">Temperature</a>
+    </div>
+
+    <br>
+
+    <form id="unitConvert">
+        <label for="length">Enter length to convert :</label><br>
+        <input type="number" name="length" id="length">
+        
+        <br>
+        <br>
+
+        <label for="unitToConvertFrom">Unit to convert from :</label><br>
+        <select name="unitToConvertFrom" id="convertFrom">
+            <option value="mm">Millimeter</option>
+            <option value="cm">Centimeter</option>
+            <option value="m" selected>Meter</option>
+            <option value="km">Kilometer</option>
+            <option value="in">Inch</option>
+            <option value="ft">Foot</option>
+            <option value="yd">Yard</option>
+            <option value="mi">Mile</option>
+        </select>
+        
+        <br>
+        <br>
+
+        <label for="unitToConvertTo">Unit to convert to :</label><br>
+        <select name="unitToConvertTo" id="convertTo">
+            <option value="mm">Millimeter</option>
+            <option value="cm">Centimeter</option>
+            <option value="m" selected>Meter</option>
+            <option value="km">Kilometer</option>
+            <option value="in">Inch</option>
+            <option value="ft">Foot</option>
+            <option value="yd">Yard</option>
+            <option value="mi">Mile</option>
+        </select>
+
+        <br>
+        <br>
+
+        <input type="button" onclick="conversionLength()" value="Convert">
+
+    <div id="conversion-result"></div>
     
+</form>
+
+<footer>
+   <p>© 2026 Unite Converter.</p> 
+</footer>    
+
+    <script src="./assets/js/script.js"></script>
 </body>
 </html>
