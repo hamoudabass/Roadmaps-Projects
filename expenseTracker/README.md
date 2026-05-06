@@ -65,7 +65,14 @@ Open a Pull Request
 
 Inspired by [RoadMap.sh](https://roadmap.sh) — [GitHub User Activity Project](https://roadmap.sh/projects/github-user-activity)
 
+## 📌 Roadmap.sh Challenge
+
+This project is part of the [Roadmap.sh Expense Tracker](https://roadmap.sh/projects/expense-tracker).
+
+---
+
 ## 👤 Author
+
 
 **Hamoud Abass** – Passionate Developer!
 [![GitHub](https://img.shields.io/badge/GitHub-Profile-black?logo=github)](https://github.com/hamoudabass)
