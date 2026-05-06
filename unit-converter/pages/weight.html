@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit Converter</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body>
+    <h1>Unit Converter</h1>
+
+    <div class="nav-bar">
+        <a href="../index.html">Length</a>
+        <a href="#" class="active">Weight</a>
+        <a href="/pages/temperature.html">Temperature</a>
+    </div>
+
+    <br>
+
+    <form id="unitConvert">
+        <label for="weigth">Enter length to convert :</label><br>
+        <input type="number" name="weigth" id="weigth">
+        
+        <br>
+        <br>
+
+        <label for="unitToConvertFrom">Unit to convert from :</label><br>
+        <select name="unitToConvertFrom" id="convertFrom">
+            <option value="mg">Milligram</option>
+            <option value="g" selected>Gram</option>
+            <option value="kg">Kilogram</option>
+            <option value="oz">Ounce</option>
+            <option value="lb">Pound</option>
+        </select>
+        
+        <br>
+        <br>
+
+        <label for="unitToConvertTo">Unit to convert to :</label><br>
+        <select name="unitToConvertTo" id="convertTo">
+            <option value="mg">Milligram</option>
+            <option value="g" selected>Gram</option>
+            <option value="kg">Kilogram</option>
+            <option value="oz">Ounce</option>
+            <option value="lb">Pound</option>
+        </select>
+        <br>
+        <br>
+
+        <input type="button" onclick="conversionWeigth()" value="Convert">
+
+    <div id="conversion-result"></div>
+
+    </form>
+
+<footer>
+        <p>© 2026 Unite Converter.</p> 
+    </footer>    
+
+    <script src="../assets/js/script.js"></script>
+</body>
+</html>
