@@ -1,0 +1,65 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+    display: block;
+    background-color: aliceblue;
+    font-family: Helvetica, sans-serif;
+    font-size: 0.9rem;
+    font-weight: 700;
+    margin: 50px auto;
+    padding: 20px 36px;
+    border: 1px solid black;
+    max-width: 50vw;
+    overflow-y: auto;
+}
+
+body > div {
+    margin-bottom: 10px;
+}
+
+.haut-page {
+    display: flex;
+    gap: 20px;
+}
+
+button {
+    width: 120px;
+    height: 40px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+p {
+    margin-bottom: 3px;
+}
+
+hr {
+    border: none;
+    border-top: 2px solid black ;
+    width: 70%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.title-accent{
+    color: green;
+    margin-bottom: 5px;
+}
+
+strong {
+    color:deepskyblue;
+    margin-bottom: 2px;
+}
+
+ul {
+    margin-bottom: 2px;
+    margin-left: 30px;
+}
+
+#exp1 {
+    margin-bottom: 10px;
+}
