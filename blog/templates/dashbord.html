@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+{% block content %}
+
+    <div class="admin-header">
+        <h1>Personal Blog</h1>
+        <p>Add +</p>
+    </div>
+    {% for article in articles %}
+    <div class="articles">
+        <a href="{{ url_for('article_page', article_id = article.id) }}"> {{ article.title }} </a>
+        <p class="date">{{ article.published_at }}</p>
+    </div>
+    {% endfor %}
+    <a href="{{url_for('home')}}">Home</a>
+{% endblock content %}

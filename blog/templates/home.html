@@ -1,11 +1,12 @@
 {% extends "layout.html" %}
 {% block content %}
 
-    <h1>This is Home Page</h1>
+    <h1>Personal Blog</h1>
     {% for article in articles %}
-    <a href="{{ url_for('article_page', article_id = article.id) }}"> {{ article.title }} </a>
-    <p>{{ article.content }}</p>
-    <p>{{ article.published_at }}</p>
+    <div class="articles">
+        <a href="{{ url_for('article_page', article_id = article.id) }}"> {{ article.title }} </a>
+        <p class="date">{{ article.published_at }}</p>
+    </div>
     {% endfor %}
-
+    <a href="{{ url_for('admin') }}">admin</a>
 {% endblock content %}
