@@ -1,0 +1,16 @@
+articles : list[dict] = [
+    {
+        "id": "1",
+        "title": "Mon premier article",
+        "content": "Le contenu de l'article...",
+        "published_at": "2026-05-12",
+        "slug": "mon-premier-article"
+    },
+    {
+        "id": "2",
+        "title": "Mon deuxième article",
+        "content": "Le contenu de l'article...",
+        "published_at": "2026-05-12",
+        "slug": "mon-deuxième-article"
+    },
+]
