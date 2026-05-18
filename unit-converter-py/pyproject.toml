@@ -1,0 +1,34 @@
+[project]
+name = "unit-converter-py"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = []
+
+[dependency-groups]
+dev = [
+    "ruff>=0.15.12",
+]
+
+[tool.ruff]
+# Version cible Python
+target-version = "py314"
+
+# Longueur max des lignes
+line-length = 88
+fix = true
+
+# Dossiers à exclure
+exclude = [
+    ".git",
+    ".venv",
+    "__pycache__",
+    "migrations",
+    "dist",
+    "build",
+]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "C4", "SIM", "RUF"]
+ignore = ["E501"]
